@@ -6,7 +6,8 @@ import streamlit as st
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import string
-
+nltk.download('punkt')
+nltk.download('stopwords')
 porter = PorterStemmer()
 
 model = pickle.load(open('model.pkl', 'rb'))
